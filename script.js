@@ -6,7 +6,9 @@ const output = document.getElementById("output");
 //your code here
 async function showMessage() {
   const message = text.value;
-  const delayVal = delay.value;
+  const delayVal = delay.value
+  output.innerText = "";
+	  
   await new Promise((resolve) => setTimeout(resolve, delayVal));
   output.innerText = message;
 }
